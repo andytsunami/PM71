@@ -3,12 +3,7 @@ package br.com.caelum.leilao.dominio;
 import org.junit.Assert;
 import org.junit.Test;
 
-import br.com.caelum.leilao.dominio.Avaliador;
-import br.com.caelum.leilao.dominio.Lance;
-import br.com.caelum.leilao.dominio.Leilao;
-import br.com.caelum.leilao.dominio.Usuario;
-
-public class TestaAvaliador {
+public class AvaliadorTest {
 	@Test
 	public void ordemCrescenteTest() {
 		Usuario usuario = new Usuario("José");
@@ -26,5 +21,4 @@ public class TestaAvaliador {
 		Assert.assertEquals(10.00, avaliador.getMenorDeTodos(), 0.0001);
 		Assert.assertEquals(500.00, avaliador.getMaiorDeTodos(), 0.0001);
 	}
-
 }
