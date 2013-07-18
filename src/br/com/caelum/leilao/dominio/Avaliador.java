@@ -24,4 +24,16 @@ public class Avaliador {
 		return menorDeTodos;
 	}
 
+	public Double getMediaLances(Leilao leilao) {
+
+		int i = 0;
+		double soma = 0;
+
+		for (Lance lance : leilao.getLances()) {
+			soma += lance.getValor();
+			i++;
+		}
+		return soma / i;
+	}
+
 }
