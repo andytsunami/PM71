@@ -10,7 +10,7 @@ import br.com.caelum.leilao.dominio.Usuario;
 
 public class TestaAvaliador {
 	@Test
-	public void testaOrdemCrescente() {
+	public void ordemCrescenteTest() {
 		Usuario usuario = new Usuario("José");
 		Leilao leilao = new Leilao("Playsation 3");
 
