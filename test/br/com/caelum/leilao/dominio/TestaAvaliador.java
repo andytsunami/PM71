@@ -1,4 +1,4 @@
-package br.com.caelum.leilao.testes;
+package br.com.caelum.leilao.dominio;
 
 import org.junit.Assert;
 import org.junit.Test;
