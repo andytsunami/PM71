@@ -55,4 +55,22 @@ public class AvaliadorTest {
 		assertEquals(120.00, avaliador.getMenorDeTodos(), 0.0001);
 		assertEquals(700.00, avaliador.getMaiorDeTodos(), 0.0001);
 	}
+	
+	@Test
+	public void deveEntenderEmOrdemDecrescente(){
+		Usuario usuario = new Usuario("maria");
+		Leilao leilao = new Leilao("Cruzeiro de navio");
+		
+		leilao.propoe(new Lance(usuario, 400));
+		leilao.propoe(new Lance(usuario, 300));
+		leilao.propoe(new Lance(usuario, 200));
+		leilao.propoe(new Lance(usuario, 100));
+		
+		Avaliador avaliador = new Avaliador();
+		avaliador.avalia(leilao);
+		
+		assertEquals(400,avaliador.getMaiorDeTodos(),0.0001);
+		assertEquals(100, avaliador.getMenorDeTodos(),0.0001);
+		
+	}
 }
