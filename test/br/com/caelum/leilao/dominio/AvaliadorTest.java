@@ -1,6 +1,7 @@
 package br.com.caelum.leilao.dominio;
 
-import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 public class AvaliadorTest {
@@ -18,7 +19,23 @@ public class AvaliadorTest {
 		Avaliador avaliador = new Avaliador();
 		avaliador.avalia(leilao);
 
-		Assert.assertEquals(10.00, avaliador.getMenorDeTodos(), 0.0001);
-		Assert.assertEquals(500.00, avaliador.getMaiorDeTodos(), 0.0001);
+		assertEquals(10.00, avaliador.getMenorDeTodos(), 0.0001);
+		assertEquals(500.00, avaliador.getMaiorDeTodos(), 0.0001);
+	}
+	
+	@Test
+	public void deveEntenderLeilaoComUmUnicoLance(){
+		
+		Usuario usuario = new Usuario("André");
+		Leilao leilao = new Leilao("Carro do Flaiton");
+		leilao.propoe(new Lance(usuario, 200.00));
+		
+		Avaliador avaliador = new Avaliador();
+		avaliador.avalia(leilao);
+		
+		assertEquals(200.00, avaliador.getMaiorDeTodos(),0.0001);
+		assertEquals(200.00, avaliador.getMenorDeTodos(),0.0001);
+		
+		
 	}
 }
