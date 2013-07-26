@@ -19,6 +19,7 @@ public class AvaliadorTest {
 		Avaliador avaliador = new Avaliador();
 		avaliador.avalia(leilao);
 
+		assertEquals(5, leilao.getLances().size(),0.0001);
 		assertEquals(10.00, avaliador.getMenorDeTodos(), 0.0001);
 		assertEquals(500.00, avaliador.getMaiorDeTodos(), 0.0001);
 	}
@@ -33,6 +34,7 @@ public class AvaliadorTest {
 		Avaliador avaliador = new Avaliador();
 		avaliador.avalia(leilao);
 
+		assertEquals(1,leilao.getLances().size(),0.0001);
 		assertEquals(200.00, avaliador.getMaiorDeTodos(), 0.0001);
 		assertEquals(200.00, avaliador.getMenorDeTodos(), 0.0001);
 
@@ -52,6 +54,7 @@ public class AvaliadorTest {
 		Avaliador avaliador = new Avaliador();
 		avaliador.avalia(leilao);
 
+		assertEquals(6, leilao.getLances().size(),0.0001);
 		assertEquals(120.00, avaliador.getMenorDeTodos(), 0.0001);
 		assertEquals(700.00, avaliador.getMaiorDeTodos(), 0.0001);
 	}
@@ -69,6 +72,7 @@ public class AvaliadorTest {
 		Avaliador avaliador = new Avaliador();
 		avaliador.avalia(leilao);
 		
+		assertEquals(4, leilao.getLances().size(),0.0001);
 		assertEquals(400,avaliador.getMaiorDeTodos(),0.0001);
 		assertEquals(100, avaliador.getMenorDeTodos(),0.0001);
 		
